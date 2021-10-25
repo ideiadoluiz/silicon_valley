@@ -68,6 +68,12 @@ extension ListViewController : UITableViewDelegate {
                   action: #selector(toggle(sender:)))
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let group = BaseViewController.contentShow.groupedBySeason()[indexPath.section + 1]
+        let episode = group![indexPath.row]
+        self.pushDetailsController(episode: episode)
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30)

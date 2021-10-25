@@ -56,4 +56,9 @@ class BaseViewController: UIViewController {
             FavoriteMemoization.setFavorite(hash, true)
         }
     }
+    
+    internal func pushDetailsController(episode: Episode) {
+        let controller = DetailsViewController(episode: episode)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }

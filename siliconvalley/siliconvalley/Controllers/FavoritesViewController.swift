@@ -69,6 +69,12 @@ extension FavoritesViewController : UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let group = filter(section: indexPath.section)
+        let episode = group[indexPath.row]
+        self.pushDetailsController(episode: episode)
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30)
         return SectionView(frame: frame, season: section + 1)

@@ -9,6 +9,17 @@ import UIKit
 
 class DetailsViewController: BaseViewController {
 
+    private(set) weak var episode: Episode?
+    
+    init(episode: Episode) {
+        super.init()
+        self.episode = episode
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func setupUI() {
         super.setupUI()
         self.setupNavBar()
@@ -18,6 +29,5 @@ class DetailsViewController: BaseViewController {
         // In case we had other views I could do it in a more generic way
         self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
         self.navigationItem.title = String.localized(forKey: "details")
-        
     }
 }
