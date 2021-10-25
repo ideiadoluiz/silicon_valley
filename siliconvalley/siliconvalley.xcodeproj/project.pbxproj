@@ -35,6 +35,7 @@
 		ABB8CA2B2726D8E9009CC6C1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2A2726D8E9009CC6C1 /* View.swift */; };
 		ABB8CA2D2726E22E009CC6C1 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */; };
 		ABB8CA2F2726E2D5009CC6C1 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2E2726E2D5009CC6C1 /* Label.swift */; };
+		ABB8CA3327270ACD009CC6C1 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA3227270ACD009CC6C1 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		ABB8CA2A2726D8E9009CC6C1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		ABB8CA2E2726E2D5009CC6C1 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		ABB8CA3227270ACD009CC6C1 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				AB3CF1F92726C25B00F689E8 /* CommonCell.swift */,
 				AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */,
 				ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */,
+				ABB8CA3227270ACD009CC6C1 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				ABB8CA2B2726D8E9009CC6C1 /* View.swift in Sources */,
 				AB3CF1E82726905B00F689E8 /* Appearance.swift in Sources */,
 				AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */,
+				ABB8CA3327270ACD009CC6C1 /* DetailsView.swift in Sources */,
 				AB3CF1F42726A82400F689E8 /* Episode.swift in Sources */,
 				AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */,
 				ABB8CA2D2726E22E009CC6C1 /* SectionView.swift in Sources */,

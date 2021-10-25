@@ -23,6 +23,8 @@ class DetailsViewController: BaseViewController {
     override func setupUI() {
         super.setupUI()
         self.setupNavBar()
+        self.view.addSubview(DetailsView(frame: self.view.frame,
+                                         episode: self.episode!))
     }
     
     private func setupNavBar() {
