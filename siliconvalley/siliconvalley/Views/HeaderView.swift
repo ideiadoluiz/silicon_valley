@@ -44,17 +44,17 @@ class HeaderView: UIView {
     private func setupTitle(_ view:UIView, _ title: String) {
         let titleStr = String.localized(forKey: "title")
         let value = "\(titleStr): \(title)"
-        makeLabel(parent: view, value: value, top: 20)
+        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 20)
     }
     
     private func setupNumbersView(_ view: UIView, _ seasons: Int, _ episodes: Int) {
         let countSeasons = String.localized(forKey: "n_seasons")
         let value1 = "\(countSeasons): \(seasons)"
-        makeLabel(parent: view, value: value1, top: 50)
+        UILabel.makeLabel(parent: view, anchorView: self, value: value1, top: 50)
         
         let countEpisodes = String.localized(forKey: "n_episodes")
         let value2 = "\(countEpisodes): \(episodes)"
-        makeLabel(parent: view, value: value2, top: 80)
+        UILabel.makeLabel(parent: view, anchorView: self, value: value2, top: 80)
     }
     
     private func setupSummary(_ parent: UIView, _ summary: String, _ top: CGFloat) {
@@ -67,15 +67,5 @@ class HeaderView: UIView {
         label.topAnchor.constraint(equalTo:self.topAnchor, constant: top).isActive = true
         label.leftAnchor.constraint(equalTo:self.leftAnchor, constant: 20).isActive = true
         label.widthAnchor.constraint(equalToConstant:self.frame.size.width - 40).isActive = true
-    }
-    
-    private func makeLabel(parent: UIView, value: String, top: CGFloat) {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        parent.addSubview(label)
-        label.text = value
-        label.sizeToFit()
-        label.topAnchor.constraint(equalTo:self.topAnchor, constant: top).isActive = true
-        label.leftAnchor.constraint(equalTo:self.leftAnchor, constant: 20).isActive = true
     }
 }

@@ -11,6 +11,7 @@
 "n_episodes" = "# Episodes";
 "n_seasons" = "# Seasons";
 
+"season" = "Season";
 "silicon_valley" = "Silicon Valley";
 "favorites" = "Favorites";
 "episode" = "Episode";

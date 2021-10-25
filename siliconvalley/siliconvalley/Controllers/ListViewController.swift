@@ -31,7 +31,7 @@ class ListViewController: BaseViewController {
     
     private func setupHeaderView(tableView: UITableView) {
         let show = BaseViewController.contentShow
-        let frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 250)
+        let frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 220)
         tableView.tableHeaderView = HeaderView(frame: frame,
                                                title: show.name!,
                                                imageUrl: show.image.original!,
@@ -51,8 +51,20 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath) as! CommonCell
-        cell.jobTitleDetailedLabel.text = "ja"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30)
+        return SectionView(frame: frame, season: section + 1)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }
 
@@ -64,7 +76,7 @@ extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let group = BaseViewController.contentShow.groupedBySeason()
-        return group[section]?.count ?? 0
+        return group[section + 1]?.count ?? 0
     }
     
 }

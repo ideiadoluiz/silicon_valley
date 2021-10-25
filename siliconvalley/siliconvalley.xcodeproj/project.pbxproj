@@ -33,6 +33,8 @@
 		AB3CF1FC2726C5C900F689E8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */; };
 		AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */; };
 		ABB8CA2B2726D8E9009CC6C1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2A2726D8E9009CC6C1 /* View.swift */; };
+		ABB8CA2D2726E22E009CC6C1 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */; };
+		ABB8CA2F2726E2D5009CC6C1 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2E2726E2D5009CC6C1 /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
 		ABB8CA2A2726D8E9009CC6C1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		ABB8CA2E2726E2D5009CC6C1 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 			children = (
 				AB3CF1F92726C25B00F689E8 /* CommonCell.swift */,
 				AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */,
+				ABB8CA2C2726E22E009CC6C1 /* SectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 		AB3CF1D7272682E200F689E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ABB8CA2E2726E2D5009CC6C1 /* Label.swift */,
 				AB3CF1D82726831500F689E8 /* Localizable.swift */,
 				AB3CF1F12726A65B00F689E8 /* DictionaryParser.swift */,
 				AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */,
@@ -362,6 +368,7 @@
 				AB3CF1FC2726C5C900F689E8 /* HeaderView.swift in Sources */,
 				AB3CF1F22726A65B00F689E8 /* DictionaryParser.swift in Sources */,
 				AB3CF1E627268F2E00F689E8 /* FavoritesViewController.swift in Sources */,
+				ABB8CA2F2726E2D5009CC6C1 /* Label.swift in Sources */,
 				AB3CF1EA272690AA00F689E8 /* Color.swift in Sources */,
 				AB3CF1FA2726C25B00F689E8 /* CommonCell.swift in Sources */,
 				AB3CF1F62726ADDC00F689E8 /* Image.swift in Sources */,
@@ -375,6 +382,7 @@
 				AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */,
 				AB3CF1F42726A82400F689E8 /* Episode.swift in Sources */,
 				AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */,
+				ABB8CA2D2726E22E009CC6C1 /* SectionView.swift in Sources */,
 				AB3CF1E227268DD600F689E8 /* TabBarController.swift in Sources */,
 				AB3CF1D92726831500F689E8 /* Localizable.swift in Sources */,
 				AB3CF1A127267FCD00F689E8 /* SceneDelegate.swift in Sources */,
