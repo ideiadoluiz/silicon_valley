@@ -9,8 +9,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    // Keeping just one copy to the content
-//    internal static let content = ContentLoader<[String: Any]>.GET().parse<>()
+    // Keeping just one copy for the example
+    internal static let contentShow = ContentLoader<[String: AnyObject]>.GET()?.parse(p: Show.self) as! Show
     
     init() {
         super.init(nibName: nil, bundle: nil)

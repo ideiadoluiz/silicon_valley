@@ -22,6 +22,10 @@ internal class Show: Parseable {
         self.episodes = episodes
     }
     
+    func groupedBySeason() -> [Int: Array<Episode>] {
+        return Dictionary(grouping: episodes) { $0.season ?? 0 }
+    }
+    
     static func parse(dict: [String : AnyObject]?) -> Parseable {
         let id = dict?["id"] as? String
         let name = dict?["name"] as? String

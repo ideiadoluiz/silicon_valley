@@ -29,6 +29,9 @@
 		AB3CF1F42726A82400F689E8 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1F32726A82400F689E8 /* Episode.swift */; };
 		AB3CF1F62726ADDC00F689E8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1F52726ADDC00F689E8 /* Image.swift */; };
 		AB3CF1F82726B33B00F689E8 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1F72726B33B00F689E8 /* Show.swift */; };
+		AB3CF1FA2726C25B00F689E8 /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1F92726C25B00F689E8 /* CommonCell.swift */; };
+		AB3CF1FC2726C5C900F689E8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */; };
+		AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		AB3CF1F32726A82400F689E8 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		AB3CF1F52726ADDC00F689E8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		AB3CF1F72726B33B00F689E8 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		AB3CF1F92726C25B00F689E8 /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
+		AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,8 @@
 		AB3CF1D02726825A00F689E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB3CF1F92726C25B00F689E8 /* CommonCell.swift */,
+				AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 			children = (
 				AB3CF1D82726831500F689E8 /* Localizable.swift */,
 				AB3CF1F12726A65B00F689E8 /* DictionaryParser.swift */,
+				AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,9 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3CF1A327267FCD00F689E8 /* ListViewController.swift in Sources */,
+				AB3CF1FC2726C5C900F689E8 /* HeaderView.swift in Sources */,
 				AB3CF1F22726A65B00F689E8 /* DictionaryParser.swift in Sources */,
 				AB3CF1E627268F2E00F689E8 /* FavoritesViewController.swift in Sources */,
 				AB3CF1EA272690AA00F689E8 /* Color.swift in Sources */,
+				AB3CF1FA2726C25B00F689E8 /* CommonCell.swift in Sources */,
 				AB3CF1F62726ADDC00F689E8 /* Image.swift in Sources */,
 				AB3CF1E027268BF300F689E8 /* NavigationController.swift in Sources */,
 				AB3CF1F82726B33B00F689E8 /* Show.swift in Sources */,
@@ -357,6 +368,7 @@
 				AB3CF1EE272693FA00F689E8 /* BaseViewController.swift in Sources */,
 				AB3CF1E427268EEF00F689E8 /* DetailsViewController.swift in Sources */,
 				AB3CF1E82726905B00F689E8 /* Appearance.swift in Sources */,
+				AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */,
 				AB3CF1F42726A82400F689E8 /* Episode.swift in Sources */,
 				AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */,
 				AB3CF1E227268DD600F689E8 /* TabBarController.swift in Sources */,

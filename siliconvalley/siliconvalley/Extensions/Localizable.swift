@@ -5,7 +5,7 @@
 //  Created by Luiz Peres on 2021-10-24.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     

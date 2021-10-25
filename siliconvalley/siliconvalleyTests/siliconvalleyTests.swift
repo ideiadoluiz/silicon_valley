@@ -40,9 +40,9 @@ class HelpersTest: XCTestCase {
                 self.name = name
             }
             
-            static func parse(dict: [String : AnyObject]) -> Parseable {
-                let id = dict["id"] as? String
-                let name = dict["name"] as? String
+            static func parse(dict: [String : AnyObject]?) -> Parseable {
+                let id = dict?["id"] as? String
+                let name = dict?["name"] as? String
                 return TestParseable(id: id, name: name)
             }
         }
@@ -56,5 +56,11 @@ class HelpersTest: XCTestCase {
         let parsed = jsonExample.parse(p: TestParseable.self) as! TestParseable
         XCTAssertEqual(parsed.id, jsonExample["id"] as? String)
         XCTAssertEqual(parsed.name, jsonExample["name"] as? String)
+    }
+    
+    func testImageDownload() throws {
+        let url = "http://static.tvmaze.com/uploads/images/medium_portrait/215/538434.jpg"
+        let image = UIImage.loadFromString(url)
+        XCTAssertNotNil(image)
     }
 }
