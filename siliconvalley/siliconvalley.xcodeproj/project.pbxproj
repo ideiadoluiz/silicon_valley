@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */; };
 		AB3CF1A127267FCD00F689E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */; };
-		AB3CF1A327267FCD00F689E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1A227267FCD00F689E8 /* ViewController.swift */; };
+		AB3CF1A327267FCD00F689E8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1A227267FCD00F689E8 /* ListViewController.swift */; };
 		AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1A727267FD100F689E8 /* Assets.xcassets */; };
 		AB3CF1B627267FD100F689E8 /* siliconvalleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1B527267FD100F689E8 /* siliconvalleyTests.swift */; };
 		AB3CF1C027267FD100F689E8 /* siliconvalleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1BF27267FD100F689E8 /* siliconvalleyUITests.swift */; };
@@ -17,6 +17,14 @@
 		AB3CF1D92726831500F689E8 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1D82726831500F689E8 /* Localizable.swift */; };
 		AB3CF1DB272683A700F689E8 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1DA272683A700F689E8 /* data.json */; };
 		AB3CF1DE2726846900F689E8 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1DD2726846900F689E8 /* ContentLoader.swift */; };
+		AB3CF1E027268BF300F689E8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1DF27268BF300F689E8 /* NavigationController.swift */; };
+		AB3CF1E227268DD600F689E8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1E127268DD600F689E8 /* TabBarController.swift */; };
+		AB3CF1E427268EEF00F689E8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1E327268EEF00F689E8 /* DetailsViewController.swift */; };
+		AB3CF1E627268F2E00F689E8 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1E527268F2E00F689E8 /* FavoritesViewController.swift */; };
+		AB3CF1E82726905B00F689E8 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1E72726905B00F689E8 /* Appearance.swift */; };
+		AB3CF1EA272690AA00F689E8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1E9272690AA00F689E8 /* Color.swift */; };
+		AB3CF1EC2726911400F689E8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1EB2726911400F689E8 /* Colors.xcassets */; };
+		AB3CF1EE272693FA00F689E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1ED272693FA00F689E8 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +48,7 @@
 		AB3CF19B27267FCD00F689E8 /* siliconvalley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = siliconvalley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB3CF1A227267FCD00F689E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB3CF1A227267FCD00F689E8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		AB3CF1A727267FD100F689E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3CF1AC27267FD100F689E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3CF1B127267FD100F689E8 /* siliconvalleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = siliconvalleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +59,14 @@
 		AB3CF1D82726831500F689E8 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		AB3CF1DA272683A700F689E8 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		AB3CF1DD2726846900F689E8 /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		AB3CF1DF27268BF300F689E8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		AB3CF1E127268DD600F689E8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AB3CF1E327268EEF00F689E8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AB3CF1E527268F2E00F689E8 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		AB3CF1E72726905B00F689E8 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		AB3CF1E9272690AA00F689E8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AB3CF1EB2726911400F689E8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AB3CF1ED272693FA00F689E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +156,12 @@
 		AB3CF1CF2726824B00F689E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB3CF1A227267FCD00F689E8 /* ViewController.swift */,
+				AB3CF1DF27268BF300F689E8 /* NavigationController.swift */,
+				AB3CF1E127268DD600F689E8 /* TabBarController.swift */,
+				AB3CF1ED272693FA00F689E8 /* BaseViewController.swift */,
+				AB3CF1E327268EEF00F689E8 /* DetailsViewController.swift */,
+				AB3CF1A227267FCD00F689E8 /* ListViewController.swift */,
+				AB3CF1E527268F2E00F689E8 /* FavoritesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +179,7 @@
 				AB3CF1DA272683A700F689E8 /* data.json */,
 				AB3CF1A727267FD100F689E8 /* Assets.xcassets */,
 				AB3CF1D6272682D500F689E8 /* Default.strings */,
+				AB3CF1EB2726911400F689E8 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -174,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				AB3CF1DD2726846900F689E8 /* ContentLoader.swift */,
+				AB3CF1E72726905B00F689E8 /* Appearance.swift */,
+				AB3CF1E9272690AA00F689E8 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -283,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3CF1D4272682D500F689E8 /* Default.strings in Resources */,
+				AB3CF1EC2726911400F689E8 /* Colors.xcassets in Resources */,
 				AB3CF1DB272683A700F689E8 /* data.json in Resources */,
 				AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */,
 			);
@@ -309,9 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3CF1A327267FCD00F689E8 /* ViewController.swift in Sources */,
+				AB3CF1A327267FCD00F689E8 /* ListViewController.swift in Sources */,
+				AB3CF1E627268F2E00F689E8 /* FavoritesViewController.swift in Sources */,
+				AB3CF1EA272690AA00F689E8 /* Color.swift in Sources */,
+				AB3CF1E027268BF300F689E8 /* NavigationController.swift in Sources */,
 				AB3CF1DE2726846900F689E8 /* ContentLoader.swift in Sources */,
+				AB3CF1EE272693FA00F689E8 /* BaseViewController.swift in Sources */,
+				AB3CF1E427268EEF00F689E8 /* DetailsViewController.swift in Sources */,
+				AB3CF1E82726905B00F689E8 /* Appearance.swift in Sources */,
 				AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */,
+				AB3CF1E227268DD600F689E8 /* TabBarController.swift in Sources */,
 				AB3CF1D92726831500F689E8 /* Localizable.swift in Sources */,
 				AB3CF1A127267FCD00F689E8 /* SceneDelegate.swift in Sources */,
 			);

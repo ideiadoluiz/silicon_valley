@@ -7,15 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: BaseViewController {
 
     private let content = ContentLoader<[String: Any]>.GET()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
 
 }
 
