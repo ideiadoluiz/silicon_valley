@@ -9,6 +9,8 @@ import UIKit
 
 class ListViewController: BaseViewController {
     
+    private weak var tableView: UITableView?
+    
     override func setupUI() {
         super.setupUI()
         
@@ -27,6 +29,7 @@ class ListViewController: BaseViewController {
         tableView.tableHeaderView?.backgroundColor = .red
         tableView.dataSource = self
         tableView.delegate = self
+        self.tableView = tableView
     }
     
     private func setupHeaderView(tableView: UITableView) {
@@ -45,8 +48,14 @@ class ListViewController: BaseViewController {
                                                       animated: true)
     }
     
-    @objc private func toggleIsFavorite() {
-        
+    @objc private func toggleIsFavorite(sender : UIButton) {
+        let hash = sender.tag
+        if let isFavorite = FavoriteMemoization.getFavorite(hash) {
+            FavoriteMemoization.setFavorite(hash, !isFavorite)
+        } else {
+            FavoriteMemoization.setFavorite(hash, true)
+        }
+        self.tableView?.reloadData()
     }
 
 }
@@ -61,9 +70,9 @@ extension ListViewController: UITableViewDelegate {
                   imgUrl: episode.image.medium!,
                   episode: episode.number!,
                   season: episode.season!,
-                  favorite: episode.isFavorite,
+                  favorite: FavoriteMemoization.getFavorite(episode.name!.hashValue) ?? false,
                   target: self,
-                  action: #selector(toggleIsFavorite))
+                  action: #selector(toggleIsFavorite(sender:)))
         return cell
     }
     

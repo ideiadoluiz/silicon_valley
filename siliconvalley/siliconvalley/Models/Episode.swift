@@ -16,8 +16,6 @@ internal class Episode: Parseable {
     private(set) var runtime: String?
     private(set) var summary: String?
     
-    internal var isFavorite = false
-    
     init(id: String?, name: String?, image: Image,
          season: Int?, number: Int?, airDate: String?,
          runtime: String?, summary: String?) {

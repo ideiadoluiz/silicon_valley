@@ -7,6 +7,18 @@
 
 import UIKit
 
+internal class FavoriteMemoization {
+    private static var savedFavorites = [Int: Bool]()
+    
+    static func getFavorite(_ hash: Int) -> Bool? {
+        return savedFavorites[hash]
+    }
+    
+    static func setFavorite(_ hash: Int, _ isFavorite: Bool) {
+        savedFavorites[hash] = isFavorite
+    }
+}
+
 class BaseViewController: UIViewController {
     
     // Keeping just one copy for the example

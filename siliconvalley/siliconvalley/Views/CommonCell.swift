@@ -53,7 +53,9 @@ class CommonCell: UITableViewCell {
         self.episodeLabel?.text = "\(seasonStr) \(episodeStr)"
         let icon = favorite ? "star.fill" : "star"
         self.favoriteButton?.setImage(UIImage(systemName: icon), for: .normal)
+        self.favoriteButton?.removeTarget(nil, action: nil, for: .allEvents)
         self.favoriteButton?.addTarget(target, action: action, for: .touchUpInside)
+        self.favoriteButton?.tag = title.hashValue
         self.loadImage(imgUrl)
     }
     
@@ -69,9 +71,10 @@ class CommonCell: UITableViewCell {
         let view = UIView(frame: self.frame)
         view.backgroundColor = .white.withAlphaComponent(0.75)
         view.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(view)
+        self.contentView.addSubview(view)
         
         UIView.addFitContraints(to: view, from: self)
+        self.contentView.bringSubviewToFront(view)
         return view
     }
     
@@ -100,12 +103,13 @@ class CommonCell: UITableViewCell {
     private func makeButton(parent: UIView, top: CGFloat) -> UIButton {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.isUserInteractionEnabled = true
         parent.addSubview(btn)
         btn.setImage(UIImage(systemName: "star"), for: .normal)
         btn.topAnchor.constraint(equalTo:self.topAnchor, constant: top).isActive = true
         btn.trailingAnchor.constraint(equalTo:self.trailingAnchor, constant: -20).isActive = true
-        btn.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        btn.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
         return btn
     }
 }
