@@ -13,12 +13,12 @@ internal class Episode: Parseable {
     private(set) var season: Int?
     private(set) var number: Int?
     private(set) var airDate: String?
-    private(set) var runtime: String?
+    private(set) var runtime: Int?
     private(set) var summary: String?
     
     init(id: String?, name: String?, image: Image,
          season: Int?, number: Int?, airDate: String?,
-         runtime: String?, summary: String?) {
+         runtime: Int?, summary: String?) {
         self.id = id
         self.name = name
         self.image = image
@@ -35,8 +35,8 @@ internal class Episode: Parseable {
         let image = Image.parse(dict: dict?["image"] as? [String: AnyObject]) as! Image
         let season = dict?["season"] as? Int
         let number = dict?["number"] as? Int
-        let airDate = dict?["airDate"] as? String
-        let runtime = dict?["runtime"] as? String
+        let airDate = dict?["airdate"] as? String
+        let runtime = dict?["runtime"] as? Int
         let summary = dict?["summary"] as? String
         return Episode(id: id, name: name, image: image,
                        season: season, number: number, airDate: airDate,

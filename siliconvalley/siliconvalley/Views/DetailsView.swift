@@ -21,9 +21,13 @@ class DetailsView: UIView {
         super.init(frame: frame)
         let mainView = setupMainView()
         setupImage(episode.image.medium!)
-        makeButton(parent: mainView, top: 300, favorite: favorite,
+        setupButton(parent: mainView, top: 300, favorite: favorite,
                    hash: episode.name!.hashValue, target: target, action: action)
         setupTitle(mainView, episode.name!)
+        setupNumbersView(mainView, episode.season!, episode.number!)
+        setupAirDate(mainView, episode.airDate!)
+        setupRuntime(mainView, episode.runtime!)
+        setupSummary(mainView, episode.summary!, 470)
     }
     
     private func setupMainView() -> UIView {
@@ -36,10 +40,29 @@ class DetailsView: UIView {
         return view
     }
     
-    private func setupTitle(_ view:UIView, _ title: String) {
-        let titleStr = String.localized(forKey: "season")
+    private func setupTitle(_ view: UIView, _ title: String) {
+        let titleStr = String.localized(forKey: "title")
         let value = "\(titleStr): \(title)"
-        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 200)
+        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 350)
+    }
+    
+    private func setupNumbersView(_ view: UIView, _ season: Int, _ episode: Int) {
+        let seasonStr = "\(String.localized(forKey: "season")): \(season)"
+        let episodeStr = "\(String.localized(forKey: "episode")): \(episode)"
+        let value = "\(seasonStr) \(episodeStr)"
+        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 380)
+    }
+    
+    private func setupAirDate(_ view: UIView, _ airdate: String) {
+        let titleStr = String.localized(forKey: "airdate")
+        let value = "\(titleStr): \(airdate)"
+        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 410)
+    }
+    
+    private func setupRuntime(_ view: UIView, _ runtime: Int) {
+        let titleStr = String.localized(forKey: "runtime")
+        let value = "\(titleStr): \(runtime)"
+        UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 440)
     }
     
     private func setupImage(_ imageUrl: String?) {
@@ -64,7 +87,7 @@ class DetailsView: UIView {
         self.btn?.setImage(UIImage(systemName: icon), for: .normal)
     }
     
-    private func makeButton(parent: UIView, top: CGFloat, favorite: Bool, hash: Int, target: Any?, action: Selector) {
+    private func setupButton(parent: UIView, top: CGFloat, favorite: Bool, hash: Int, target: Any?, action: Selector) {
         let btn = UIButton()
         self.btn = btn
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -77,4 +100,15 @@ class DetailsView: UIView {
         btn.tag = hash
     }
     
+    private func setupSummary(_ parent: UIView, _ summary: String, _ top: CGFloat) {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        parent.addSubview(label)
+        label.text = summary.cleanParagraph
+        label.sizeToFit()
+        label.numberOfLines = 0
+        label.topAnchor.constraint(equalTo:self.topAnchor, constant: top).isActive = true
+        label.leftAnchor.constraint(equalTo:self.leftAnchor, constant: 20).isActive = true
+        label.widthAnchor.constraint(equalToConstant:self.frame.size.width - 40).isActive = true
+    }
 }
