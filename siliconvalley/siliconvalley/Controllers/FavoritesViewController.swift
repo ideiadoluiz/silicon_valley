@@ -33,7 +33,6 @@ class FavoritesViewController: BaseViewController {
         UIView.addFitContraints(to: tableView, from: view)
         tableView.register(CommonCell.self, forCellReuseIdentifier: "episodeCell")
         
-        tableView.tableHeaderView?.backgroundColor = .red
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView = tableView

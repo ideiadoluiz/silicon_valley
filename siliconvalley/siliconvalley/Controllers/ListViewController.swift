@@ -30,7 +30,6 @@ class ListViewController: BaseViewController {
         tableView.register(CommonCell.self, forCellReuseIdentifier: "episodeCell")
         setupHeaderView(tableView: tableView)
         
-        tableView.tableHeaderView?.backgroundColor = .red
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView = tableView
