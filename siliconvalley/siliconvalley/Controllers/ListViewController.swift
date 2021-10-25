@@ -34,7 +34,7 @@ class ListViewController: BaseViewController {
         let frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 220)
         tableView.tableHeaderView = HeaderView(frame: frame,
                                                title: show.name!,
-                                               imageUrl: show.image.original!,
+                                               imageUrl: show.image.medium!,
                                                summary: show.summary!,
                                                countSeasons: self.numberOfSections(in: tableView),
                                                countEpisodes: show.episodes.count)
@@ -44,6 +44,10 @@ class ListViewController: BaseViewController {
         self.navigationController?.pushViewController(DetailsViewController(),
                                                       animated: true)
     }
+    
+    @objc private func toggleIsFavorite() {
+        
+    }
 
 }
 
@@ -51,6 +55,15 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath) as! CommonCell
+        let group = BaseViewController.contentShow.groupedBySeason()[indexPath.section + 1]
+        let episode = group![indexPath.row]
+        cell.fill(title: episode.name!,
+                  imgUrl: episode.image.medium!,
+                  episode: episode.number!,
+                  season: episode.season!,
+                  favorite: episode.isFavorite,
+                  target: self,
+                  action: #selector(toggleIsFavorite))
         return cell
     }
     

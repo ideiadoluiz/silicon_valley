@@ -36,8 +36,13 @@ class HeaderView: UIView {
     private func setupImage(_ imageUrl: String?) {
         if let imageUrl = imageUrl {
             let imageView = UIImageView(frame: self.frame)
-            imageView.image = UIImage.loadFromString(imageUrl)
             self.addSubview(imageView)
+            
+            Task {
+                await UIImage.loadFromString(imageUrl) { [unowned imageView] img in
+                    imageView.image = img
+                }
+            }
         }
     }
     

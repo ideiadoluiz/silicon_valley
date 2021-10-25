@@ -57,10 +57,4 @@ class HelpersTest: XCTestCase {
         XCTAssertEqual(parsed.id, jsonExample["id"] as? String)
         XCTAssertEqual(parsed.name, jsonExample["name"] as? String)
     }
-    
-    func testImageDownload() throws {
-        let url = "http://static.tvmaze.com/uploads/images/medium_portrait/215/538434.jpg"
-        let image = UIImage.loadFromString(url)
-        XCTAssertNotNil(image)
-    }
 }
