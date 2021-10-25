@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let content = ContentLoader<[String: Any]>.GET()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
 
