@@ -9,6 +9,8 @@ import Foundation
 
 internal struct ContentLoader<T> {
 
+    @available(*, unavailable) private init() {}
+
     internal static func GET() -> T? {
         let mainBundle = Bundle.main
         let jsonPath = mainBundle.path(forResource: "data", ofType: ".json")
