@@ -9,17 +9,12 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupUI()
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder);
-    }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
     }
     
     init(key: String, systemName: String, tag: Int) {
@@ -28,6 +23,11 @@ class BaseViewController: UIViewController {
                                 image: UIImage(systemName: systemName),
                                 tag: tag)
         self.tabBarItem = item
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupUI()
     }
     
     internal func setupUI() {
