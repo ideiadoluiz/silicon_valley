@@ -20,16 +20,24 @@ class ListViewController: BaseViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
         
-        tableView.topAnchor.constraint(equalTo:view.topAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo:view.leftAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo:view.rightAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo:view.bottomAnchor).isActive = true
-        
+        UIView.addFitContraints(to: tableView, from: view)
         tableView.register(CommonCell.self, forCellReuseIdentifier: "episodeCell")
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200))
+        setupHeaderView(tableView: tableView)
+        
         tableView.tableHeaderView?.backgroundColor = .red
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func setupHeaderView(tableView: UITableView) {
+        let show = BaseViewController.contentShow
+        let frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 250)
+        tableView.tableHeaderView = HeaderView(frame: frame,
+                                               title: show.name!,
+                                               imageUrl: show.image.original!,
+                                               summary: show.summary!,
+                                               countSeasons: self.numberOfSections(in: tableView),
+                                               countEpisodes: show.episodes.count)
     }
 
     @objc private func pressed() {

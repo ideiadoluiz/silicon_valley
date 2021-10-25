@@ -7,6 +7,9 @@
 */
 
 "title" = "Title";
+"summary" = "Summary";
+"n_episodes" = "# Episodes";
+"n_seasons" = "# Seasons";
 
 "silicon_valley" = "Silicon Valley";
 "favorites" = "Favorites";

@@ -32,6 +32,7 @@
 		AB3CF1FA2726C25B00F689E8 /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1F92726C25B00F689E8 /* CommonCell.swift */; };
 		AB3CF1FC2726C5C900F689E8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */; };
 		AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */; };
+		ABB8CA2B2726D8E9009CC6C1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8CA2A2726D8E9009CC6C1 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		AB3CF1F92726C25B00F689E8 /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
 		AB3CF1FB2726C5C900F689E8 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		ABB8CA2A2726D8E9009CC6C1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				AB3CF1D82726831500F689E8 /* Localizable.swift */,
 				AB3CF1F12726A65B00F689E8 /* DictionaryParser.swift */,
 				AB3CF1FD2726C74A00F689E8 /* ImageDownload.swift */,
+				ABB8CA2A2726D8E9009CC6C1 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				AB3CF1DE2726846900F689E8 /* ContentLoader.swift in Sources */,
 				AB3CF1EE272693FA00F689E8 /* BaseViewController.swift in Sources */,
 				AB3CF1E427268EEF00F689E8 /* DetailsViewController.swift in Sources */,
+				ABB8CA2B2726D8E9009CC6C1 /* View.swift in Sources */,
 				AB3CF1E82726905B00F689E8 /* Appearance.swift in Sources */,
 				AB3CF1FE2726C74A00F689E8 /* ImageDownload.swift in Sources */,
 				AB3CF1F42726A82400F689E8 /* Episode.swift in Sources */,

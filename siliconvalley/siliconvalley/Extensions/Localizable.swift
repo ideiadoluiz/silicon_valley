@@ -13,4 +13,9 @@ extension String {
         return Bundle.main.localizedString(forKey: key, value: nil, table: "Default")
     }
     
+    internal var cleanParagraph: String {
+        return self.replacingOccurrences(of: "<p>", with: "")
+            .replacingOccurrences(of: "</p>", with: "")
+    }
+    
 }
