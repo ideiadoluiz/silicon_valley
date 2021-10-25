@@ -13,6 +13,8 @@
 		AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1A727267FD100F689E8 /* Assets.xcassets */; };
 		AB3CF1B627267FD100F689E8 /* siliconvalleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1B527267FD100F689E8 /* siliconvalleyTests.swift */; };
 		AB3CF1C027267FD100F689E8 /* siliconvalleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1BF27267FD100F689E8 /* siliconvalleyUITests.swift */; };
+		AB3CF1D4272682D500F689E8 /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1D6272682D500F689E8 /* Default.strings */; };
+		AB3CF1D92726831500F689E8 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1D82726831500F689E8 /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		AB3CF1B527267FD100F689E8 /* siliconvalleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siliconvalleyTests.swift; sourceTree = "<group>"; };
 		AB3CF1BB27267FD100F689E8 /* siliconvalleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = siliconvalleyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CF1BF27267FD100F689E8 /* siliconvalleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siliconvalleyUITests.swift; sourceTree = "<group>"; };
+		AB3CF1D5272682D500F689E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Default.strings; sourceTree = "<group>"; };
+		AB3CF1D82726831500F689E8 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +97,13 @@
 		AB3CF19D27267FCD00F689E8 /* siliconvalley */ = {
 			isa = PBXGroup;
 			children = (
+				AB3CF1D7272682E200F689E8 /* Extensions */,
+				AB3CF1D02726825A00F689E8 /* Views */,
+				AB3CF1CF2726824B00F689E8 /* Controllers */,
+				AB3CF1CE2726824600F689E8 /* Models */,
+				AB3CF1D12726829B00F689E8 /* Resources */,
 				AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */,
 				AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */,
-				AB3CF1A227267FCD00F689E8 /* ViewController.swift */,
-				AB3CF1A727267FD100F689E8 /* Assets.xcassets */,
 				AB3CF1AC27267FD100F689E8 /* Info.plist */,
 			);
 			path = siliconvalley;
@@ -116,6 +123,45 @@
 				AB3CF1BF27267FD100F689E8 /* siliconvalleyUITests.swift */,
 			);
 			path = siliconvalleyUITests;
+			sourceTree = "<group>";
+		};
+		AB3CF1CE2726824600F689E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB3CF1CF2726824B00F689E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CF1A227267FCD00F689E8 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB3CF1D02726825A00F689E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB3CF1D12726829B00F689E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CF1A727267FD100F689E8 /* Assets.xcassets */,
+				AB3CF1D6272682D500F689E8 /* Default.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB3CF1D7272682E200F689E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CF1D82726831500F689E8 /* Localizable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3CF1D4272682D500F689E8 /* Default.strings in Resources */,
 				AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +296,7 @@
 			files = (
 				AB3CF1A327267FCD00F689E8 /* ViewController.swift in Sources */,
 				AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */,
+				AB3CF1D92726831500F689E8 /* Localizable.swift in Sources */,
 				AB3CF1A127267FCD00F689E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +331,17 @@
 			targetProxy = AB3CF1BC27267FD100F689E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB3CF1D6272682D500F689E8 /* Default.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB3CF1D5272682D500F689E8 /* en */,
+			);
+			name = Default.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AB3CF1C327267FD100F689E8 /* Debug */ = {
