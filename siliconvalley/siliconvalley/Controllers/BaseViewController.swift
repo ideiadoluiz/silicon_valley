@@ -48,5 +48,12 @@ class BaseViewController: UIViewController {
     internal func setupUI() {
         self.view.backgroundColor = .white
     }
-    
+ 
+    internal func toggleIsFavorite(hash : Int) {
+        if let isFavorite = FavoriteMemoization.getFavorite(hash) {
+            FavoriteMemoization.setFavorite(hash, !isFavorite)
+        } else {
+            FavoriteMemoization.setFavorite(hash, true)
+        }
+    }
 }

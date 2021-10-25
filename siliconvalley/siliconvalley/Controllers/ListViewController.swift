@@ -17,6 +17,10 @@ class ListViewController: BaseViewController {
         self.createTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView?.reloadData()
+    }
+    
     private func createTableView() {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,26 +46,15 @@ class ListViewController: BaseViewController {
                                                countSeasons: self.numberOfSections(in: tableView),
                                                countEpisodes: show.episodes.count)
     }
-
-    @objc private func pressed() {
-        self.navigationController?.pushViewController(DetailsViewController(),
-                                                      animated: true)
-    }
     
-    @objc private func toggleIsFavorite(sender : UIButton) {
-        let hash = sender.tag
-        if let isFavorite = FavoriteMemoization.getFavorite(hash) {
-            FavoriteMemoization.setFavorite(hash, !isFavorite)
-        } else {
-            FavoriteMemoization.setFavorite(hash, true)
-        }
+    @objc func toggle(sender: UIButton) {
+        self.toggleIsFavorite(hash: sender.tag)
         self.tableView?.reloadData()
     }
 
 }
 
-extension ListViewController: UITableViewDelegate {
-    
+extension ListViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "episodeCell", for: indexPath) as! CommonCell
         let group = BaseViewController.contentShow.groupedBySeason()[indexPath.section + 1]
@@ -72,7 +65,7 @@ extension ListViewController: UITableViewDelegate {
                   season: episode.season!,
                   favorite: FavoriteMemoization.getFavorite(episode.name!.hashValue) ?? false,
                   target: self,
-                  action: #selector(toggleIsFavorite(sender:)))
+                  action: #selector(toggle(sender:)))
         return cell
     }
     
