@@ -9,6 +9,9 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    // Keeping just one copy to the content
+//    internal static let content = ContentLoader<[String: Any]>.GET().parse<>()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }

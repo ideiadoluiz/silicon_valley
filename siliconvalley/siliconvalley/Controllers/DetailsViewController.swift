@@ -18,5 +18,6 @@ class DetailsViewController: BaseViewController {
         // In case we had other views I could do it in a more generic way
         self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
         self.navigationItem.title = String.localized(forKey: "details")
+        
     }
 }

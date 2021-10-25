@@ -8,8 +8,6 @@
 import UIKit
 
 class ListViewController: BaseViewController {
-
-    private let content = ContentLoader<[String: Any]>.GET()
     
     override func setupUI() {
         super.setupUI()

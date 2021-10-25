@@ -30,4 +30,31 @@ class HelpersTest: XCTestCase {
         XCTAssertEqual(nonExisting, "random_str")
     }
     
+    func testParseable() throws {
+        class TestParseable: Parseable {
+            private(set) var id: String?
+            private(set) var name: String?
+            
+            init(id: String?, name: String?) {
+                self.id = id
+                self.name = name
+            }
+            
+            static func parse(dict: [String : AnyObject]) -> Parseable {
+                let id = dict["id"] as? String
+                let name = dict["name"] as? String
+                return TestParseable(id: id, name: name)
+            }
+        }
+        
+        let jsonExample = [
+            "id" : "1234",
+            "name": "Test",
+            "wow": 1
+        ] as [String: AnyObject]
+        
+        let parsed = jsonExample.parse(p: TestParseable.self) as! TestParseable
+        XCTAssertEqual(parsed.id, jsonExample["id"] as? String)
+        XCTAssertEqual(parsed.name, jsonExample["name"] as? String)
+    }
 }
