@@ -10,9 +10,7 @@
 		AB3CF19F27267FCD00F689E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */; };
 		AB3CF1A127267FCD00F689E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */; };
 		AB3CF1A327267FCD00F689E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1A227267FCD00F689E8 /* ViewController.swift */; };
-		AB3CF1A627267FCD00F689E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1A427267FCD00F689E8 /* Main.storyboard */; };
 		AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1A727267FD100F689E8 /* Assets.xcassets */; };
-		AB3CF1AB27267FD100F689E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3CF1A927267FD100F689E8 /* LaunchScreen.storyboard */; };
 		AB3CF1B627267FD100F689E8 /* siliconvalleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1B527267FD100F689E8 /* siliconvalleyTests.swift */; };
 		AB3CF1C027267FD100F689E8 /* siliconvalleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3CF1BF27267FD100F689E8 /* siliconvalleyUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,9 +37,7 @@
 		AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB3CF1A227267FCD00F689E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB3CF1A527267FCD00F689E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB3CF1A727267FD100F689E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB3CF1AA27267FD100F689E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB3CF1AC27267FD100F689E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3CF1B127267FD100F689E8 /* siliconvalleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = siliconvalleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CF1B527267FD100F689E8 /* siliconvalleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = siliconvalleyTests.swift; sourceTree = "<group>"; };
@@ -100,9 +96,7 @@
 				AB3CF19E27267FCD00F689E8 /* AppDelegate.swift */,
 				AB3CF1A027267FCD00F689E8 /* SceneDelegate.swift */,
 				AB3CF1A227267FCD00F689E8 /* ViewController.swift */,
-				AB3CF1A427267FCD00F689E8 /* Main.storyboard */,
 				AB3CF1A727267FD100F689E8 /* Assets.xcassets */,
-				AB3CF1A927267FD100F689E8 /* LaunchScreen.storyboard */,
 				AB3CF1AC27267FD100F689E8 /* Info.plist */,
 			);
 			path = siliconvalley;
@@ -228,9 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3CF1AB27267FD100F689E8 /* LaunchScreen.storyboard in Resources */,
 				AB3CF1A827267FD100F689E8 /* Assets.xcassets in Resources */,
-				AB3CF1A627267FCD00F689E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +283,6 @@
 			targetProxy = AB3CF1BC27267FD100F689E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AB3CF1A427267FCD00F689E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB3CF1A527267FCD00F689E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AB3CF1A927267FD100F689E8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB3CF1AA27267FD100F689E8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AB3CF1C327267FD100F689E8 /* Debug */ = {
@@ -440,7 +413,6 @@
 				INFOPLIST_FILE = siliconvalley/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +440,6 @@
 				INFOPLIST_FILE = siliconvalley/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
