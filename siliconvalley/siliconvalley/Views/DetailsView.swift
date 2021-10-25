@@ -11,14 +11,19 @@ import UIKit
 
 class DetailsView: UIView {
     
+    private weak var btn: UIButton?
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    init(frame: CGRect, episode: Episode) {
+    init(frame: CGRect, episode: Episode, favorite: Bool, target: Any?, action: Selector) {
         super.init(frame: frame)
         let mainView = setupMainView()
         setupImage(episode.image.medium!)
+        makeButton(parent: mainView, top: 300, favorite: favorite,
+                   hash: episode.name!.hashValue, target: target, action: action)
+        setupTitle(mainView, episode.name!)
     }
     
     private func setupMainView() -> UIView {
@@ -31,7 +36,7 @@ class DetailsView: UIView {
         return view
     }
     
-    private func setupTitle(_ view:UIView, _ title: Int) {
+    private func setupTitle(_ view:UIView, _ title: String) {
         let titleStr = String.localized(forKey: "season")
         let value = "\(titleStr): \(title)"
         UILabel.makeLabel(parent: view, anchorView: self, value: value, top: 200)
@@ -52,6 +57,24 @@ class DetailsView: UIView {
             imageView.topAnchor.constraint(equalTo:self.topAnchor, constant: 120).isActive = true
             imageView.centerXAnchor.constraint(equalTo:self.centerXAnchor).isActive = true
         }
+    }
+    
+    internal func updateButton(favorite: Bool) -> Void {
+        let icon = favorite ? "star.fill" : "star"
+        self.btn?.setImage(UIImage(systemName: icon), for: .normal)
+    }
+    
+    private func makeButton(parent: UIView, top: CGFloat, favorite: Bool, hash: Int, target: Any?, action: Selector) {
+        let btn = UIButton()
+        self.btn = btn
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.isUserInteractionEnabled = true
+        parent.addSubview(btn)
+        self.updateButton(favorite: favorite)
+        btn.topAnchor.constraint(equalTo:parent.topAnchor, constant: top).isActive = true
+        btn.centerXAnchor.constraint(equalTo:parent.centerXAnchor).isActive = true
+        btn.addTarget(target, action: action, for: .touchUpInside)
+        btn.tag = hash
     }
     
 }

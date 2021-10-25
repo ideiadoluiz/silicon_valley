@@ -10,6 +10,7 @@ import UIKit
 class DetailsViewController: BaseViewController {
 
     private(set) weak var episode: Episode?
+    private weak var detailsView: DetailsView?
     
     init(episode: Episode) {
         super.init()
@@ -23,13 +24,23 @@ class DetailsViewController: BaseViewController {
     override func setupUI() {
         super.setupUI()
         self.setupNavBar()
-        self.view.addSubview(DetailsView(frame: self.view.frame,
-                                         episode: self.episode!))
+        let detailsView = DetailsView(frame: self.view.frame,
+                                      episode: self.episode!,
+                                      favorite: FavoriteMemoization.getFavorite(self.episode!.name!.hashValue) ?? false,
+                                      target: self,
+                                      action:#selector(toggle(sender:)))
+        self.detailsView = detailsView
+        self.view.addSubview(detailsView)
     }
     
     private func setupNavBar() {
         // In case we had other views I could do it in a more generic way
         self.navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
         self.navigationItem.title = String.localized(forKey: "details")
+    }
+    
+    @objc func toggle(sender: UIButton) {
+        self.toggleIsFavorite(hash: sender.tag)
+        self.detailsView?.updateButton(favorite: FavoriteMemoization.getFavorite(sender.tag) ?? false)
     }
 }
